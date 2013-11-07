@@ -1,0 +1,415 @@
+@keyframes pulsateDisabledOpacity {
+  from { opacity: 0.3; }
+  35% { opacity: 0.5; }
+  to { opacity: 0.3; }
+}
+
+html {
+  
+}
+
+body {
+  color: #222222;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+  margin: 0;
+  padding: 300px 0 0 0;
+}
+
+b {
+  font-weight: 400;
+}
+
+a {
+  color: #27AE60;
+}
+
+a:visited {
+  
+}
+
+a:focus {
+  
+}
+
+a:active,
+a:hover {
+  color: #2ECC71;
+}
+
+a.disabled {
+  opacity: 0.4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  margin: 0;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 28px;
+  margin: 26px 0px 12px 0px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+input {
+  background: rgba(236, 240, 241, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 12px 8px;
+  text-align: center;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+body > header {
+  background: #FFFFFF;
+  height: 46px;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+body > header h1 {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 44px;
+  margin: 0;
+  position: absolute;
+  right: 16px;
+  top: 0px;
+}
+
+body > header h1 b {
+  font-style: normal;
+}
+
+body > header input {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 400;
+  height: 30px;
+  left: 8px;
+  outline: none;
+  padding: 0px 8px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  width: 180px;
+  transition: border 0.2s ease-out;
+}
+
+body > h2 {
+  height: 300px;
+  left: 0;
+  line-height: 310px;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+section {
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-image: url('/images/plain_and_simple.jpg');
+  padding: 85px 0px 85px 0px;
+  position: relative;
+  z-index: 2;
+}
+
+section article {
+  margin: 0 20% 22px;
+  perspective: 1000;
+  position: relative;
+  text-align: center;
+}
+
+section article.hidden {
+  display: none;
+}
+
+section article:nth-of-type(odd) div header {
+  background: rgba(236, 240, 241, 0.8);
+}
+
+section article:nth-of-type(even) div header {
+  background: rgba(246, 250, 251, 0.8);
+}
+
+section article:nth-of-type(odd) div p {
+  background: rgba(216, 220, 221, 1);
+}
+
+section article:nth-of-type(even) div p {
+  background: #ccd0d1;
+}
+
+section article div {
+  transition: 0.6s;
+  -webkit-transform-origin: 100% 60px;
+  -moz-transform-origin: 100% 60px;
+  transform-origin: 100% 60px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+section article:hover div,
+section article.hover div {
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}
+
+section article div,
+section article div header,
+section article div p {
+	width: 100%;
+	height: 120px;
+}
+
+section article div header,
+section article div p {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section article div p {
+  line-height: 120px;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+section article i.fa,
+section article a.fa {
+  border-left: 1px solid rgba(0, 0, 0, 0.06);
+  height: 48px;
+  line-height: 48px;
+  position: absolute;
+  right: 0px;
+  width: 40px;
+}
+
+section article a.fa {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 26px;
+  text-decoration: none;
+  top: 0;
+}
+
+section article a:last-of-type {
+  bottom: 0;
+  font-size: 20px;
+  top: auto;
+}
+
+section article a:hover {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+section article i.fa {
+  background: rgba(0, 0, 0, 0.05);
+  height: 24px;
+  line-height: 24px;
+  -moz-text-stroke: 1px rgba(0, 0, 0, 0.1);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
+  -o-text-stroke: 1px rgba(0, 0, 0, 0.1);
+  text-stroke: 1px rgba(0, 0, 0, 0.1);
+  top: 48px;
+}
+
+.rating-green {
+  color: rgba(0, 255, 0, 0.55);
+}
+
+.rating-green:hover {
+  color: rgba(0, 255, 0, 0.75);
+}
+
+.rating-yellow {
+  color: rgba(255, 255, 0, 0.4);
+}
+
+.rating-yellow:hover {
+  color: rgba(255, 255, 0, 0.6);
+}
+
+.rating-red {
+  color: rgba(255, 0, 0, 0.4);
+}
+
+.rating-red:hover {
+  color: rgba(255, 0, 0, 0.6);
+}
+
+label {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+body > article {
+  background: #FFFFFF;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100%;
+  text-align: center;
+}
+
+body > article a.disabled {
+  animation-duration: 1.9s;
+  animation-name: pulsateDisabledOpacity;
+  animation-iteration-count: infinite;
+}
+
+body > article h1 {
+  font-size: 48px;
+  margin: 100px 0px 48px 0px;
+}
+
+body > article p a {
+  margin: 0px 16px 0 16px;
+}
+
+body > article p a.active {
+  border-bottom: 2px solid #27AE60;
+  border-radius: 15px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 8px 18px;
+}
+
+body > article a.active:hover {
+  border-color: #2ECC71;
+}
+
+body > article > a {
+  font-size: 2em;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  right: 16px;
+  text-decoration: none;
+  top: 12px;
+}
+
+body > article > a:before {
+  content: "\f10c";
+}
+
+body > article > a:hover:before {
+  content: "\f05c";
+}
+
+body > article aside {
+  margin: 60px auto 0px auto;
+  max-width: 640px;
+  transition: all 0.4s ease-out;
+  width: 76%;
+}
+
+body > article aside.loading {
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+body > article aside h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 1em -1em 0em 0em;
+  text-align: right;
+}
+
+body > article aside h2:before {
+  content: "\2014";
+  margin-right: 5px;
+}
+
+body > article aside p {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  text-align: left;
+  text-indent: 60px;
+}
+
+footer {
+  font-size: 16px;
+  line-height: 100px;
+  text-align: center;
+}
+
+body > article {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+#app-view > header,
+#app-view > h2,
+#app-view > section,
+#app-view > footer {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+#app-view > article {
+  opacity: 1;
+}
+
+.green section {
+  color: #FFFFFF;
+}
+
+.green section article:nth-of-type(odd) div header {
+  background: #2ECC71;
+}
+
+.green section article:nth-of-type(even) div header {
+  background: #27AE60;
+}
+
+.green section article:nth-of-type(odd) div p {
+  background: #40D47E;
+}
+
+.green section article:nth-of-type(even) div p {
+  background: #23C36B;
+}

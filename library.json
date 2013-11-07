@@ -1,0 +1,47 @@
+{
+  "library": [
+    {
+      "identifier": "firefox",
+      "application": "Firefox",
+      "developer": "Mozilla",
+      "license": "MPL",
+      "type": "browser",
+      "rating": "green",
+      "labels": [
+        "opensource"
+      ],
+      "queries": {
+        "mac": "select href from html where url='http://www.mozilla.org/en-US/firefox/all/' and xpath='//tr[@id=\"en-US\"]/td[@class=\"download mac\"]/a/@href'",
+        "windows": "select href from html where url='http://www.mozilla.org/en-US/firefox/all/' and xpath='//tr[@id=\"en-US\"]/td[@class=\"download win\"]/a/@href'",
+        "linux": "select href from html where url='http://www.mozilla.org/en-US/firefox/all/' and xpath='//tr[@id=\"en-US\"]/td[@class=\"download linux\"]/a/@href'"
+      },
+      "information": {
+        "wikipedia": "Firefox"
+      }
+    },
+    
+    {
+      "identifier": "aurora",
+      "application": "Firefox Aurora",
+      "developer": "Mozilla",
+      "license": "MPL",
+      "type": "browser",
+      "rating": "green",
+      "labels": [
+        "opensource"
+      ]
+    },
+    
+    {
+      "identifier": "chrome",
+      "application": "Chrome",
+      "developer": "Google",
+      "license": "googlechrometos",
+      "type": "browser",
+      "rating": "yellow",
+      "labels": [
+        "opensource"
+      ]
+    }
+  ]
+}
