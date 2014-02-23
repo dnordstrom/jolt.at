@@ -133,7 +133,8 @@ body > h2 {
 
 section {
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center center;
   background-image: url('/images/plain_and_simple.jpg');
   padding: 85px 0px 85px 0px;
   position: relative;
